@@ -1,0 +1,20 @@
+<div>
+  客户：我计划购买
+  <div [ngStyle]="{width: '60px'}">
+    <d-select
+      [options]="options"
+      [filterKey]="'name'"
+      [(ngModel)]="currentOption"
+    ></d-select>
+  </div>
+  年年金险，每年存入<d-input-number size="sm" [(ngModel)]="principal" class="input-number"></d-input-number>元
+</div>
+<div>
+  顾问：
+  <div>
+    按照{{ timeUnit }}利率{{ rate }}来算，你将在
+    <d-input-number size="sm" [(ngModel)]="periods" class="input-number"></d-input-number>
+    {{ timeUnit }}后收获：
+  </div>
+  <code>{{ result }}{{ moneyUnit }}</code>
+</div>

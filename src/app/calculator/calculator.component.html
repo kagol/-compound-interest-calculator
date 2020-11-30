@@ -1,0 +1,33 @@
+<!-- <div>我想在{{ periods }}{{ timeUnit }}后获得{{ fetureValueText }}{{ moneyUnit }}</div>
+<div>按照{{ timeUnit }}利率{{ rateInterestPercent }}来算，你可以选择：</div>
+<div>1. 在第一{{ timeUnit }}一次性投入{{ fetureValueText }}{{ moneyUnit }}</div>
+<div>2. 每{{ timeUnit }}固定投入{{ fetureValueText }}{{ moneyUnit }}</div> -->
+
+<br>
+
+<div class="chat">
+  <div class="user">客户</div>
+  <div class="send">
+    <div class="arrow"></div>
+    <div>
+      我计划每{{ timeUnit }}存入
+      <d-input-number size="sm" [(ngModel)]="principal" class="input-number"></d-input-number>
+      {{ moneyUnit }}
+    </div>
+ </div>
+</div>
+<div class="chat">
+  <div class="user">顾问</div>
+  <div class="send">
+    <div class="arrow"></div>
+    <div>
+      <div>
+        按照{{ timeUnit }}利率
+        <d-input-number size="sm" [(ngModel)]="rate" class="input-number"></d-input-number>
+        来算，你将在
+        <d-input-number size="sm" [(ngModel)]="periods" class="input-number"></d-input-number>
+        {{ timeUnit }}后收获：
+      </div>
+      <code>{{ result }}{{ moneyUnit }}</code>
+    </div>
+</div>

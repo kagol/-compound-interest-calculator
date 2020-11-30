@@ -1,0 +1,57 @@
+:host {
+  margin: 10px;
+}
+
+code {
+  word-break: break-word;
+  border-radius: 2px;
+  overflow-x: auto;
+  background-color: #fff5f5;
+  color: #ff502c;
+  font-size: .87em;
+  padding: .065em .4em;
+  font-size: 20px;
+  font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+}
+
+.chat {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .user {
+    border: #ccc 1px solid;
+    margin-right: 15px;
+    padding: 6px 10px;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .send {
+    left: 0;
+    position: relative;
+    padding: 6px 10px 6px 0;
+    background: #ffffff;
+    border-radius: 5px;//外部矩形给圆角
+    display: flex;//布局选用flex布局
+    align-items: center;//内部元素垂直居中
+    border: #ccc 1px solid;//外边界的样式
+  }
+
+  .send .arrow {
+    position: relative;//相对定位
+    background: #fff;//背景色与外部的圆角矩形背景色一致
+    width: 10px;//定义合适的宽高
+    height: 10px;
+    left: -5.9px;//调整出舒适的对接位置
+    font-size: 0;
+    border-bottom: #ccc solid 1px;//因为三角形的border只需要展示出两条边
+    border-left: #ccc solid 1px;
+    box-sizing: border-box;//将盒子设置为border-box这样不会因为加了border而变宽
+    transform:rotate(45deg);//将小矩形旋转个45度从而做出三角形的突出角
+    -ms-transform:rotate(45deg);    /* IE 9 */
+    -moz-transform:rotate(45deg);   /* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg);     /* Opera */
+  }
+}

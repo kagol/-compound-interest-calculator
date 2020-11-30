@@ -1,27 +1,50 @@
 # CompoundInterestCalculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+复利计算器
 
-## Development server
+## 通用复利计算组件 Calculator
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+复利方式
 
-## Code scaffolding
+- 一次性支付本金
+- 等额多次支付
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+变量
 
-## Build
+- principal 本金
+- periods 计息期数
+- rate 利率
+- fetureValue 本息和
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+支持给定4个变量中的任意3个，计算第4个变量。
 
-## Running unit tests
+比如：
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+小明计划每年投入10000元，按5%的利率算，20年后，自己有多少收获？
 
-## Running end-to-end tests
+小亮想要自己60岁退休的时候有1000万养老金，计划每年投入10万元，他要保证平均年利率是多少？
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+张三想要自己60岁退休的时候有1000万养老金，按5%的利率算，自己每年应该投入多少呢？
 
-## Further help
+李四一次性投入10万元，按8%的利率算，几年之后自己的钱可以翻倍？
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 年金保险复利计算组件 Annuity Insurance Calculator
+
+变量
+
+- principal 每年投入的本金
+- periods 第periods年的本息和
+
+5年之后才开始计算复利，利率固定为5%。
+
+3年交
+
+每年投入固定金额，投3年，前5年无收益，第6年开始计算复利。
+
+5年交
+
+每年投入固定金额，投5年，前5年无收益，第6年开始计算复利。
+
+10年交
+
+每年投入固定金额，前6年无收益，第6年开始计算复利，所有投入的本金和第6年开始产生的利息均参与复利。
